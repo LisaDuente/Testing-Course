@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * Suggestions for the method addScore():
  *     - if-statement to check if dice>20 or dice<0
- *     - if-statement to check p1Score/p2Score>100
+ *     - if-statement to check p1Score> 100, p2Score>100
  *     - if-statement to check gameOver == false (?) Maybe changes in game structure to have a method
  *       to take care of this?
  */
