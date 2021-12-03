@@ -3,10 +3,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Tester: Lisa
- * What: AddScore()
- * When: 2021-12.03
+ * What: countConsonants()
+ * When: 2021-12-03
  * Basis: german alphabet
- * Number of Failures: 4 of 9
+ * Number of Failures: 4 of 10
  *
  * Suggestions for the method countConsonants():
  *     - should not count Vowels if they are in upper-case
