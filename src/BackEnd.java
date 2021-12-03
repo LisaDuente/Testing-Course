@@ -161,4 +161,8 @@ public class BackEnd {
     public void setGameOver(boolean gameOver) {
         this.gameOver = gameOver;
     }
+
+    public void setPlayer2(String player2) {
+        this.player2 = player2;
+    }
 }
