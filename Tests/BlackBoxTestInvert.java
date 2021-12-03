@@ -6,11 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
  * What: invert()
  * When: 2021-12-03
  * Basis: german alphabet
- * Number of Failures: 2 out of 7
+ * Number of Failures: 7 out of 12
  *
  * Suggestions for the method invert():
  *      - check length of the String before inverting it to avoid java.lang.StringIndexOutOfBoundsExceptions (reliability/robusthet)
- *      - find a strategy (try/catch) to handle the occurrence of a String that is null
+ *      - to handle the occurrence of a String that is null? (@shouldNotBeNull -> is this a good strategy?)
+ *      - check the occurrence of two (or more) equal consecutive letters
  */
 
 public class BlackBoxTestInvert {
@@ -63,7 +64,6 @@ public class BlackBoxTestInvert {
         assertEquals(" ^°|><;:,.-#~+{[]}'*`?=)(/&%$§\"!",result);
     }
 
-
     @Test
     void shouldHandleLongStrings(){
         //input
@@ -82,6 +82,71 @@ public class BlackBoxTestInvert {
 
         //result
         assertEquals(controlString,result);
+    }
+
+    //adds two letters
+    @Test
+    void shouldHandleSameLetters(){
+        //input
+        String testString = "aaaaa";
+
+        //when
+        String result = Iqh.invert(testString);
+
+        //result
+        assertEquals("aaaaa",result);
+    }
+
+    //adds a letter in front of the inverted String and in the end
+    @Test
+    void shouldHandleSameVowels2(){
+        //input
+        String testString = "Haar";
+
+        //when
+        String result = Iqh.invert(testString);
+
+        //result
+        assertEquals("raaH",result);
+    }
+
+    //doesn't matter if they are consonats or vowels
+    @Test
+    void shouldHandleSameConsonants(){
+        //input
+        String testString = "Alle";
+
+        //when
+        String result = Iqh.invert(testString);
+
+        //result
+        assertEquals("ellA",result);
+    }
+
+    //doesn't matter if they are letters or signs
+    @Test
+    void shouldHandleSameSigns(){
+        //input
+        String testString = "?!!?";
+
+        //when
+        String result = Iqh.invert(testString);
+
+        //result
+        assertEquals("?!!?",result);
+    }
+
+    //Exception: java.lang.StringIndexOutOfBoundsException: String index out of range: 1
+    @Test
+    void shouldHandleShortStrings(){
+        //input
+        String testString = "a";
+
+        //when
+        String result = Iqh.invert(testString);
+
+        //result
+        assertEquals("a",result);
     }
 
     //Exception: java.lang.StringIndexOutOfBoundsException: String index out of range: 1
@@ -104,7 +169,7 @@ public class BlackBoxTestInvert {
         String testString = null;
 
         //when
-        String result = Iqh.invert(testString);
+        String result = Iqh.invert(testString); //specs? Should it crash?
 
         //result
         assertEquals("llun",result);
