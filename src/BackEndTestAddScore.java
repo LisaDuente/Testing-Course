@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *       to take care of this?
  */
 
-class BackEndTest {
+class BackEndTestAddScore {
     BackEnd testBackEnd;
 
     @BeforeEach
