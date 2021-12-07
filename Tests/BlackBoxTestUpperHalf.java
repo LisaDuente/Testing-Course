@@ -47,7 +47,32 @@ public class BlackBoxTestUpperHalf {
       assertEquals("67890", result);
    }
 
-   //a test with consecutive letters, because I found an exception in lower half with this
+   @Test
+   void shouldReturnUpperHalfConsecutive() {
+      //input
+      String testString = "oooooo";
+
+      //when
+      String result = Iqh.upperHalf(testString);
+
+      //result
+      assertEquals("ooo", result);
+
+   }
+
+   //can't handle long strings, where is the limit?
+   @Test
+   void shouldHandleLongStrings(){
+      //input
+      int i = 0;
+      int j = 0;
+      String testString = "";
+      String control = "";
+
+      while(i<1000) {
+         testString = testString.concat("j");
+         i++;
+      }
 
    //a test with really long strings
 

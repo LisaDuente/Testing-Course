@@ -42,17 +42,96 @@ public class BlackBoxTestScatterString {
 
     }
 
-    //a test for empty strings
+    @Test
+    void shouldHandleEmtyString() {
 
-    //a test for really long strings
+        //input
+        String testString = "";
 
-    //a test with numbers
+        //when
+        String result = Iqh.scatterString(testString);
 
-    //a test with signs (mellanslag!)
+        //result
+        assertEquals("", result);
+    }
+    // String is randomized but its hard to guess what its randomized to
+        @Test
+        void shouldHandleLongStrings(){
+            //input
+            int i = 0;
+            int j = 0;
+            String testString = "";
+            String control = "";
 
-    //a test with consecutive letters
+            while(i<1000) {
+                testString = testString.concat("jk");
+                i++;
+            }
 
-    //a test with String = null
+            while(j<1000){
+                control = control.concat("jk");
+                j++;
+            }
+
+            //when
+            String result = Iqh.scatterString(testString);
+
+            //result
+            assertEquals(control, result);
+        }
+
+    @Test
+    void shouldRandomizeNumbers() {
+
+        //input
+        String testString = "123456";
+
+        //when
+        String result = Iqh.scatterString(testString);
+
+        //result
+        assertEquals("345216", result);
+    }
+
+    @Test
+    void shouldHandleSignsInString () {
+
+        //input
+        String testString = "!§$%&/()=?@'#+ ";
+
+        //when
+        String result = Iqh.scatterString(testString);
+
+        //result
+        assertEquals("!§$%&/()=?@'#+ ", result);
+    }
+
+// Adds a letter when you use consecutive letters
+    @Test
+    void shouldHandleConsecutiveInString() {
+
+        //input
+        String testString = "uuuuuuuiu";
+
+        //when
+        String result = Iqh.scatterString(testString);
+
+        //result
+        assertEquals("iuuuuuu", result);
+    }
+
+    @Test
+    void shouldHandleNull() {
+
+        //input
+        String testString = null;
+
+        //when
+        String result = Iqh.scatterString(testString);
+
+        //result
+        assertEquals("null", result);
+    }
 
 }
 
