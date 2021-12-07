@@ -62,17 +62,18 @@ public class BlackBoxTestUpperHalf {
 
    //can't handle long strings, where is the limit?
    @Test
-   void shouldHandleLongStrings(){
+   void shouldHandleLongStrings() {
       //input
       int i = 0;
       int j = 0;
       String testString = "";
       String control = "";
 
-      while(i<1000) {
+      while (i < 1000) {
          testString = testString.concat("j");
          i++;
       }
+   }
 
    //a test with really long strings
 
