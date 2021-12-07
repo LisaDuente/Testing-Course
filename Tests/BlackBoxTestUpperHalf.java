@@ -36,7 +36,7 @@ public class BlackBoxTestUpperHalf {
    }
 
    @Test
-   void checkNumbers(){
+   void checkAllNumbers(){
       //input
       String testString = "1234567890";
 
