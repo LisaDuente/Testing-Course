@@ -174,7 +174,4 @@ public class BlackBoxTestInvert {
         //result
         assertEquals("llun",result);
     }
-
-
-
 }
