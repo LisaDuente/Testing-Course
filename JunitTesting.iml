@@ -39,5 +39,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="IqStringHandler" level="project" />
   </component>
 </module>
