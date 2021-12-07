@@ -47,6 +47,19 @@ public class BlackBoxTestUpperHalf {
       assertEquals("67890", result);
    }
 
+   //a test with consecutive letters, because I found an exception in lower half with this
+
+   //a test with really long strings
+
+   //a test with empty strings
+
+   //a test with a string that is null
+
+   //(test with a string with just upper case)
+
+   //(test with a string with just lower case)
+
+
 
 
 

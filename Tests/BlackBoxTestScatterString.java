@@ -42,6 +42,17 @@ public class BlackBoxTestScatterString {
 
     }
 
+    //a test for empty strings
+
+    //a test for really long strings
+
+    //a test with numbers
+
+    //a test with signs (mellanslag!)
+
+    //a test with consecutive letters
+
+    //a test with String = null
 
 }
 
