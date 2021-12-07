@@ -162,14 +162,7 @@ public class BackEnd {
         this.gameOver = gameOver;
     }
 
-    public void setPlayer1(String player1) {
-        this.player1 = player1;
-    }
-
     public void setPlayer2(String player2) {
         this.player2 = player2;
     }
-
-        }
-
-
+}

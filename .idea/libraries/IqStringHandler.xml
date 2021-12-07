@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="IqStringHandler">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../BlackBoxFiles/BlackBoxTest/IqStringHandler.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
