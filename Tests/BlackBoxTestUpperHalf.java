@@ -86,8 +86,4 @@ public class BlackBoxTestUpperHalf {
    //(test with a string with just lower case)
 
 
-
-
-
-
 }
