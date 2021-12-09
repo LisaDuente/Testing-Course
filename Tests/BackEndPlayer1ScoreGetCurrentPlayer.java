@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Tester: Bella
+ * Tester: Isabella + Lisa
  * What: randomStarter() & player1Score
- * When: 2021-12-02
+ * When: 2021-12-09
  *
  */
 
@@ -70,15 +70,66 @@ class BackEndPlayer1ScoreGetCurrentPlayer {
     void testPlayer1Score() {
         //input
         String player1 = "";
+        backEnd.setPlayer1(player1);
         int p1Score = 0;
+        backEnd.setP1Score(p1Score);
 
         //when
         String expected = player1 + " Score: " + p1Score;
-        String actual = backEnd.getPlayer1()  + backEnd.player1Score();
+        String actual = backEnd.player1Score();
 
         //result
         assertEquals( expected, actual);
-
     }
+
+
+    @Test
+    void testPlayer1ScoreWithLongString() {
+        //input
+        String player1 = "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ";
+        backEnd.setPlayer1(player1);
+        int p1Score = 0;
+        backEnd.setP1Score(p1Score);
+
+        //when
+        String expected = player1 + " Score: " + p1Score;
+        String actual = backEnd.player1Score();
+
+        //result
+        assertEquals( expected, actual);
+    }
+
+    @Test
+    void testPlayer1ScoreWithNullString() {
+        //input
+        String player1 = null;
+        backEnd.setPlayer1(player1);
+        int p1Score = 0;
+        backEnd.setP1Score(p1Score);
+
+        //when
+        String expected = player1 + " Score: " + p1Score;
+        String actual = backEnd.player1Score();
+
+        //result
+        assertEquals( expected, actual);
+    }
+
+    @Test
+    void testPlayer1ScoreWithNegativeNumbers() {
+        //input
+        String player1 = "Lisa";
+        int p1Score = -30;
+        backEnd.setPlayer1(player1);
+        backEnd.setP1Score(p1Score);
+
+        //when
+        String expected = player1 + " Score: " + p1Score;
+        String actual = backEnd.player1Score();
+
+        //result
+        assertEquals( expected, actual);
+    }
+
 
 }
