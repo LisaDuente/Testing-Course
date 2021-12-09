@@ -8,7 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
  * Tester: Niklas
  * What: scatterString()
  * When: 2021-12-07
- * Number of Failures: 2 out of 2
+ * Number of Failures: 1 out of 8
+ *
+ * Suggestions for scatterString():
+ *  - check for consecutive letters: the method adds a letter if two or more consecutive letters exist
  */
 
 public class BlackBoxTestScatterString {
