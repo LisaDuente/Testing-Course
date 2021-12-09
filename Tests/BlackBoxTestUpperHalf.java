@@ -5,6 +5,12 @@ import static org.junit.jupiter.api.Assertions.*;
  * Tester: Niklas
  * What: upperHalf()
  * When: 2021-12-07
+ *Number of Failures: 2 out of 9
+ *
+ * Suggestions for upperHalf():
+ *    - how to handle long strings? There is a fault, if the even string is too long, it returns null
+ *    - how to handle strings that are null? implement exception handling?
+ *
  */
 
 public class BlackBoxTestUpperHalf {
@@ -32,7 +38,6 @@ public class BlackBoxTestUpperHalf {
 
       //result
       assertNull(result);
-
    }
 
    @Test
@@ -62,28 +67,77 @@ public class BlackBoxTestUpperHalf {
 
    //can't handle long strings, where is the limit?
    @Test
-   void shouldHandleLongStrings() {
+   void shouldHandleLongStrings(){
       //input
       int i = 0;
       int j = 0;
       String testString = "";
       String control = "";
 
-      while (i < 1000) {
+      while(i<1000) {
          testString = testString.concat("j");
          i++;
       }
+
+      while(j<500){
+         control = control.concat("j");
+         j++;
+      }
+
+      //when
+      String result = Iqh.upperHalf(testString);
+
+      //result
+      assertEquals(control, result);
    }
 
-   //a test with really long strings
+   @Test
+   void shouldHandleEmptyString(){
+      //input
+      String testString = "";
 
-   //a test with empty strings
+      //when
+      String result = Iqh.upperHalf(testString);
 
-   //a test with a string that is null
+      //result
+      assertEquals("", result);
+   }
 
-   //(test with a string with just upper case)
+   //how to handle a string that is null? Exception handling/ if-statement?
+   @Test
+   void shouldHandleStringsNull(){
+      //input
+      String testString = null;
 
-   //(test with a string with just lower case)
+      //when
+      String result = Iqh.upperHalf(testString);
 
+      //result
+      assertEquals("ll", result);
+   }
+
+   @Test
+   void shouldReturnStringUpperCase(){
+      //input
+      String testString = "ABCDEF";
+
+      //when
+      String result = Iqh.upperHalf(testString);
+
+      //result
+      assertEquals("DEF", result);
+   }
+
+   @Test
+   void shouldHandleLowerCaseStrings(){
+      //input
+      String testString = "asdfgh";
+
+      //when
+      String result = Iqh.upperHalf(testString);
+
+      //result
+      assertEquals("fgh", result);
+   }
 
 }
