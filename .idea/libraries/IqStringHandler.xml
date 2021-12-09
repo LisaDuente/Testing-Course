@@ -2,6 +2,7 @@
   <library name="IqStringHandler">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../Documents/BlackboxTesting/BlackBoxFiles-main/BlackBoxTest/IqStringHandler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/BlackBoxFiles-main/BlackBoxTest/IqStringHandler.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
