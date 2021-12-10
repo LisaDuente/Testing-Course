@@ -82,7 +82,6 @@ class BackEndPlayer1ScoreGetCurrentPlayer {
         assertEquals( expected, actual);
     }
 
-
     @Test
     void testPlayer1ScoreWithLongString() {
         //input
